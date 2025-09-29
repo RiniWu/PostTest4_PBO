@@ -98,7 +98,7 @@ public void setTanggalPelaksanaan(String tanggalPelaksanaan) {
 - Getter dan Setter ini berfungsi untuk mengambil dan mengubah data festival. Method getter dipakai untuk melihat nilai dari atribut, seperti nama festival, asal, dan tanggal pelaksanaannya.
 - Sedangkan method setter dipakai untuk mengganti atau memberikan nilai baru pada atribut tersebut. Cara ini menjaga agar data tetap aman karena atribut dibuat private, tetapi tetap bisa digunakan lewat method khusus.
 
-**f. Method toString()**
+**f. Method Abstract**
 ```Java
 public abstract String getJenisFestival();
 ```
@@ -596,6 +596,78 @@ Bagian ini menangani kesalahan input. Jika pengguna salah memasukkan tipe data (
 ```
 Perulangan akan terus berjalan selama pilihan bukan 6. Begitu pengguna memilih keluar, program berhenti dan Scanner akan ditutup.
 
+## Alur Program
+
+**Menu Utama**
+
+<img width="378" height="166" alt="image" src="https://github.com/user-attachments/assets/42270f3d-8178-4b38-8855-4f265e71f40b" />
+
+Awalnya, program akan menampilkan menu yang akan dipilih oleh pengguna. Di dalam tampilan menu utama berupa daftar pilihan tambah festival, lihat daftar festival, ubah festival, hapus festival, lihat deskripsi singkat atau keluar dari program. Pengguna diminta memasukkan angka sesuai pilihan menu, yang kemudian disimpan ke dalam variabel pilihan.
+
+---
+**1. Tambah Festival**
+
+<img width="373" height="252" alt="image" src="https://github.com/user-attachments/assets/793c0898-1bbb-4a2c-aec4-c07571caa3fe" />
+
+- Jika memilih menu 1 tambah festival maka program akan menampilkan submenu untuk memilih jenis festival, yaitu Tradisional atau Seni Pertunjukan. 
+- Pada program ini, pilihan Festival Tradisional berfungsi untuk menambahkan festival yang berkaitan dengan adat dan budaya lokal. Oleh karena itu, selain memasukkan nama, asal, dan tanggal festival, pengguna juga diminta mengisi informasi khusus berupa ritual adat utama yang menjadi ciri khas festival tersebut.
+- Sementara itu, pilihan Festival Seni Pertunjukan digunakan untuk menambahkan festival yang menampilkan berbagai bentuk seni, seperti musik, tari, atau teater. Pada jenis ini, pengguna diminta menambahkan informasi khusus berupa jenis seni yang ditampilkan dalam festival. Dengan demikian, kedua pilihan tersebut membedakan detail informasi yang harus diinput sesuai dengan karakteristik masing-masing festival.
+
+<img width="433" height="358" alt="image" src="https://github.com/user-attachments/assets/95aa2730-2680-46f7-8023-fabe48b980a4" />
+
+- Jika memilih Tradisional dengan memasukkan angka 1. Selanjutnya, program akan meminta beberapa data festival yang harus diisi, yaitu nama festival, asal festival, tanggal festival, serta ritual adat utama. Setelah semua data berhasil dimasukkan, program akan menampilkan pesan konfirmasi bahwa festival baru telah berhasil ditambahkan ke dalam daftar.
+
+<img width="408" height="362" alt="image" src="https://github.com/user-attachments/assets/3fa152b0-27fb-4524-8035-726270f15a4f" />
+
+- Jika memilih jenis festival Seni Pertunjukan dengan memasukkan angka 2. Program akan meminta beberapa data terkait festival, yaitu nama festival, asal festival, tanggal festival, serta jenis seni. Setelah semua informasi dimasukkan, program menampilkan pesan bahwa festival berhasil ditambahkan ke dalam daftar.
+
+---
+**2. Lihat Daftar Festival**
+
+<img width="1141" height="382" alt="image" src="https://github.com/user-attachments/assets/b2822d35-97dd-430c-a330-184a298d7ed0" />
+
+- Jika memilih angka 2 pada menu, program akan langsung menampilkan  daftar list festival yang sebelumnya sudah ada maupun yang baru saja ditambahkan dalam bentuk tabel yang rapi. Di dalam tabel ini tercantum berbagai informasi penting, mulai dari nomor urut, nama festival, daerah asal, tanggal pelaksanaan, hingga keterangan mengenai ritual yang dilakukan atau jenis seni yang ditampilkan.
+- Dengan tampilan tersebut, pengguna bisa dengan mudah mengetahui detail setiap festival secara jelas dan terstruktur. Hal ini memudahkan pengguna untuk mengenali festival-festival yang ada sebelum melakukan pengelolaan lebih lanjut, misalnya menambahkan festival baru, mengubah data, atau menghapus yang sudah tidak diperlukan.
+
+---
+**3. Ubah Festival**
+
+<img width="1138" height="586" alt="image" src="https://github.com/user-attachments/assets/6d90d5ec-25a2-4e71-9611-f18728b28371" />
+
+- Jika memilih angka 3, program akan menampilkan daftar festival budaya yang sudah tersimpan. Pengguna kemudian diminta memilih nomor festival yang ingin diubah, contohnya saya ingin menubah nomor 6 Festival Erau. Setelah itu, program akan menampilkan pilihan jenis festival baru, yaitu 1. Tradisional dan 2. Seni Pertunjukan. Disini saya memilih opsi 1 (Tradisional), lalu diminta memasukkan data baru berupa nama festival, asal daerah, tanggal pelaksanaan, serta keterangan ritual adat. Data yang dimasukkan menggantikan data lama, dan setelah proses selesai, program menampilkan pesan “Festival berhasil diubah!” sebagai tanda bahwa perubahan data telah berhasil dilakukan.
+
+***Bukti data telah berubah***
+
+<img width="1143" height="360" alt="image" src="https://github.com/user-attachments/assets/327a4025-b4a0-4f15-a620-b79d3357a074" />
+
+---
+**4. Hapus Festival**
+
+<img width="1151" height="396" alt="image" src="https://github.com/user-attachments/assets/5f24bb2c-26bc-48a6-9aaa-b60e9918a1d1" />
+
+- Jika memilih angka 4, program akan menampilkan daftar festival terlebih dahulu. Jika tidak ada data, proses berhenti. Jika ada, pengguna diminta memasukkan nomor festival yang akan dihapus. Nomor yang dipilih digunakan untuk menghapus data melalui service.hapusFestival(). Jika nomor valid, program menampilkan pesan keberhasilan penghapusan dengan menyebutkan nama festival yang dihapus, sedangkan nomor yang tidak sesuai menghasilkan pesan “Nomor tidak valid!”.
+- Setelah proses penghapusan data maka tabel akan otomatis menyesuaikan urutan dari nomor festival, sebagai contoh output dibawah ini yang sebelumnya saya telah melakukan penghapusan data nomor 4 dengan nama festival "Festival Danau Toba".
+
+<img width="1142" height="178" alt="image" src="https://github.com/user-attachments/assets/db1c514c-2af0-4a32-ae4f-8f6f126280a4" />
+
+---
+**5. Lihat Deskripsi Singkat**
+
+<img width="1142" height="404" alt="image" src="https://github.com/user-attachments/assets/2580a3be-8f1d-4a6e-a3dc-653c8bf7dce2" />
+
+- Jika memilih menu 5, program akan menampilkan daftar festival yang sudah tersimpan lengkap dengan nomor, nama, asal, tanggal, dan keterangan. Jika daftar kosong, proses berhenti. Namun, jika ada data, pengguna diminta memasukkan nomor festival yang ingin dilihat deskripsinya.
+- Pada contoh di atas, ketika pengguna memilih nomor 3 yaitu Bali Arts Festival, program menampilkan deskripsi singkat: “Bali Arts Festival menampilkan seni berupa Pertunjukan Tari yang dilaksanakan pada 20 Juni 2025”. Dengan demikian, menu ini memudahkan pengguna untuk melihat ringkasan informasi dari festival tertentu secara cepat dan jelas.
+
+**6. Keluar**
+
+<img width="670" height="290" alt="image" src="https://github.com/user-attachments/assets/7ad5270e-f4a3-424b-a52b-a1b1a1105721" />
+
+- Jika memilih angka 5, maka program akan menampilkan pesan “Terima kasih! Program telah selesai ^-^” lalu keluar dari perulangan do–while.
+- Pilihan lain selain 1–5: Jika pengguna memasukkan angka di luar pilihan yang tersedia, program menampilkan pesan “Pilihan tidak valid!”. Seperti output dibawah ini.
+
+***Output jika memilih angka selain 1-6***
+
+<img width="371" height="166" alt="image" src="https://github.com/user-attachments/assets/a885b7d2-8553-4c1d-9435-ff1b8e5677e3" />
 
 
 

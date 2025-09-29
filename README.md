@@ -660,10 +660,10 @@ Awalnya, program akan menampilkan menu yang akan dipilih oleh pengguna. Di dalam
 
 **6. Keluar**
 
-<img width="670" height="290" alt="image" src="https://github.com/user-attachments/assets/7ad5270e-f4a3-424b-a52b-a1b1a1105721" />
+<img width="657" height="312" alt="image" src="https://github.com/user-attachments/assets/35aec8c6-5081-4c58-9214-d98bde43cc20" />
 
-- Jika memilih angka 5, maka program akan menampilkan pesan “Terima kasih! Program telah selesai ^-^” lalu keluar dari perulangan do–while.
-- Pilihan lain selain 1–5: Jika pengguna memasukkan angka di luar pilihan yang tersedia, program menampilkan pesan “Pilihan tidak valid!”. Seperti output dibawah ini.
+- Jika memilih angka 6, maka program akan menampilkan pesan “Terima kasih! Program telah selesai ^-^” lalu keluar dari perulangan do–while.
+- Pilihan lain selain 1–6: Jika pengguna memasukkan angka di luar pilihan yang tersedia, program menampilkan pesan “Pilihan tidak valid!”. Seperti output dibawah ini.
 
 ***Output jika memilih angka selain 1-6***
 

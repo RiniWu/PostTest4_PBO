@@ -667,7 +667,8 @@ Awalnya, program akan menampilkan menu yang akan dipilih oleh pengguna. Di dalam
 
 ***Output jika memilih angka selain 1-6***
 
-<img width="371" height="166" alt="image" src="https://github.com/user-attachments/assets/a885b7d2-8553-4c1d-9435-ff1b8e5677e3" />
+<img width="366" height="191" alt="image" src="https://github.com/user-attachments/assets/969d1747-3bd1-4636-b14b-8c0f818738df" />
+
 
 
 
